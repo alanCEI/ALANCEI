@@ -44,8 +44,7 @@
 /*Nav*/
 .header__nav {
     margin: 0;
-    margin-left: 0.5rem;
-    margin-right: 2.5rem;
+    margin-right: 1rem;
     padding: 0;
 }
 .header__ul {
