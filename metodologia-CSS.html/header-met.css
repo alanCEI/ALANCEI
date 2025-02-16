@@ -1,0 +1,68 @@
+/*Body*/
+.body {
+    background-color: white;
+    font-size: 16px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/*Header*/
+.header {
+    background-color:rgb(243, 247, 242); /*rgb(248, 245, 245);*/
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/*Logo*/
+.header__h1 {
+    margin: 0;
+    margin-left: 1rem;
+}
+.header__img {
+    margin-top: 10px;
+    width: 8rem;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+.header__img:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+    transform: translateX(3px);
+}
+.header__a {
+    text-decoration: none;
+    color: black;
+}
+.header__a:hover {
+    text-decoration: none;   
+}
+/*Nav*/
+.header__nav {
+    margin: 0;
+    margin-left: 0.5rem;
+    margin-right: 2.5rem;
+    padding: 0;
+}
+.header__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    text-align: center; 
+}
+.header__li {
+    padding: 0.5rem;
+}
+.header__a--nav {
+    text-decoration: none;
+    color: black;   
+}
+.header__a--nav:hover {
+    text-decoration: underline;
+    color: black  
+}
