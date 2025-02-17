@@ -10,9 +10,9 @@
 }
 /*Header*/
 .header {
-    background-color:rgb(243, 247, 242); /*rgb(248, 245, 245);*/
+    background-color:rgb(243, 247, 242);
     width: 100%;
-    padding: 10px;
+    padding: 0.625rem;  
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@
     margin-left: 1rem;
 }
 .header__img {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     width: 8rem;
     height: auto;
     border-radius: 15px;
