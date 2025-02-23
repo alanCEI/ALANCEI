@@ -1,0 +1,23 @@
+/*Footer CSS*/
+.footer {
+    border-top: 1px solid black;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; 
+}
+.footer__p .footer__a {
+    margin: 0;
+    text-align: center;
+    padding: 0.5rem;
+}
+.footer__a {
+    text-decoration: none;
+    color: black;
+}
+.footer__a:hover {
+    text-decoration: underline;
+    color: rgb(17, 17, 17);
+}
