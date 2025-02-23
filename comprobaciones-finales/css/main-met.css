@@ -52,6 +52,7 @@
     height: auto;  
     display: block; 
     margin: 0 auto;
+    aspect-ratio: auto; /*Para solventar problemas con lighthouse*/
 }
 .grid__figure:hover {
     transform: translateY(-3px);
