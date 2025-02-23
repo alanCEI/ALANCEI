@@ -96,4 +96,6 @@ Resultados con el inspeccionador de Chrome utilizando el audit de lighthouse, ve
 Con la web [dequeuniversity.com](https://dequeuniversity.com/rules/axe/4.7/color-contrast) he verificado los colores y el contraste, en este caso, solo tengo dos variables de fondo muy claros `white` y `rgb(243, 247, 242);` para el header y el grid. El color de la letra es `black`, ver pantallazo del resultado del contraste
 
 ![color-contrast](img/color-contrast.png)
+
+He descargado y revisado los fonts e iconos de Google en la web [Gooegle fonts](https://fonts.google.com/icons?icon.size=24&icon.color=%23e8eaed) para usar las librerias en la proxima actividad.
 ____________________________________________________________________________________________________________________________________________________________________________________________
