@@ -85,7 +85,11 @@ Resultados con el inspeccionador de Chrome utilizando el audit de lighthouse, ve
 
 ![lighthouse-audit](img/lighthouse-audit.png)
 
-- Ademas, utilize las webs para comprimir las imagenes [tinypng.com](https://tinypng.com/)
+- Use la web [tinypng.com](https://tinypng.com/) para comprimir el peso de las imagenes.
+
+- He agregado el atributo `loading="lazy"` en cada etiqueta `<img>` para que cargue la pagina primero y cargara la imagen cuando sea visible en pantalla.
+
+- Ademas, agregamos en el CSS en las clases de las imagenes del header y el grid `aspect-ratio: auto;` para solventar problemas con lighthouse y optimizar las imagenes.
 
 ## Accesibilidad
 
