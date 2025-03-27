@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tecnica / Trainee</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }      
+        .Body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        }     
+        .fondoHidden {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        z-index: 1;
+        }     
+        .content {
+        z-index: 10;
+        text-align: center;
+        max-width: 80%;
+        }     
+        .marcaContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        }      
+        .marca {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        padding: 5px;
+        }      
+        .marca.dimmed {
+        color: rgba(255, 255, 255, 0.4);
+        }       
+        .activeFondo {
+        opacity: 1;
+        }
+</style>
+</head>
+<!--Body-->
+<body class="Body">
+<!--Fondo Hidden-->
+    <div class="fondoHidden" id="background-zpump">
+        <img src="#" alt="Imagen1">
+    </div>
+    <div class="fondoHidden" id="background-coach2o">
+        <img src="#" alt="Imagen2">
+    </div>
+    <div class="fondoHidden" id="background-rcar">
+        <img src="#" alt="Imagen3">
+    </div>
+    <div class="fondoHidden" id="background-emotional">
+        <img src="#" alt="Imagen4">
+    </div>
+    <div class="fondoHidden" id="background-alhambra">
+        <img src="#" alt="Imagen5">
+    </div>
+    <div class="fondoHidden" id="background-actimel">
+        <img src="#" alt="Imagen6">
+    </div>
+    <div class="fondoHidden" id="background-ffuuss">
+        <img src="#" alt="Imagen7">
+    </div>
+    <div class="fondoHidden" id="background-delicious">
+        <img src="#" alt="Imagen8">
+    </div>
+    <div class="fondoHidden" id="background-roca">
+        <img src="#" alt="Imagen9">
+    </div>
+    <div class="fondoHidden" id="background-deep">
+        <img src="#" alt="Imagen10">
+    </div>
+<!--Content-->
+    <div class="content">
+        <div class="marcaContainer">
+            <div class="marca" data-bg="background-zpump">ZPump Urban Fit</div>
+            <div class="marca" data-bg="background-coach2o">Coach2o</div>
+            <div class="marca" data-bg="background-rcar">RCar</div>
+            <div class="marca" data-bg="background-emotional">Emotional Pulse</div>
+            <div class="marca" data-bg="background-alhambra">Alhambra</div>
+            <div class="marca" data-bg="background-actimel">Actimel</div>
+            <div class="marca" data-bg="background-ffuuss">ffuuss</div>
+            <div class="marca" data-bg="background-delicious">Delicious</div>
+            <div class="marca" data-bg="background-roca">Roca</div>
+            <div class="marca" data-bg="background-deep">Deep State</div>
+        </div>
+    </div>
+<!--Script-->
+<script>
+    // Variables
+    const marcas = document.querySelectorAll(".marca");
+    const fondos = document.querySelectorAll(".fondoHidden");
+    
+    // Events listeners a marca
+    marcas.forEach(marca => {
+    marca.addEventListener("mouseenter", () => {
+        // Agregamos el id del fondo a marca con getAttribute
+        const fondoId = marca.getAttribute("data-bg");
+        
+        // Hidden el fondo
+        fondos.forEach(fondo => {
+        fondo.classList.remove("activeFondo");
+        });
+        // Agregamos el dim
+        marcas.forEach(m => {
+        m.classList.add("dimmed");
+        });
+        
+        // Cuando pasa el mouse muestra la imagen de la palabra y quita el dim solo de esa palabra
+        document.getElementById(fondoId).classList.add("activeFondo");
+        marca.classList.remove("dimmed");
+    });
+    });
+    
+    // Cuando se va el mouse
+    document.querySelector(".marcaContainer").addEventListener("mouseleave", () => {
+      // Hidden el fondo
+    fondos.forEach(fondo => {
+        fondo.classList.remove("activeFondo");
+    });
+
+      // Quitamos el dim
+    marcas.forEach(marca => {
+        marca.classList.remove("dimmed");
+    });
+    });
+</script>
+</body>
+</html>
